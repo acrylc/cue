@@ -2,7 +2,9 @@
   "name": "test23",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.0"
+    "jquery": "~2.1.0",
+    "underscore": "~1.6.0",
+    "mapboxjs": "~1.6.1"
   },
   "devDependencies": {}
 }

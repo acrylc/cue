@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>app</key>
+	<string>com.bohemiancoding.sketch</string>
+	<key>build</key>
+	<integer>5361</integer>
+	<key>commit</key>
+	<string>4570185e2c9ded14ebc287c802202c126573b527</string>
+	<key>fonts</key>
+	<array>
+		<string>FuturaLT-Bold</string>
+		<string>Lato-Light</string>
+		<string>FuturaLT-ExtraBold</string>
+		<string>AbrilFatface-Regular</string>
+		<string>Aleo-Bold</string>
+		<string>FuturaLT-ExtraBold</string>
+		<string>AbrilFatface-Regular</string>
+		<string>Aleo-Bold</string>
+		<string>Lato-Black</string>
+		<string>FuturaLT-Bold</string>
+		<string>FuturaLT-Bold</string>
+		<string>Aleo-Bold</string>
+		<string>FuturaLT-Bold</string>
+		<string>AbrilFatface-Regular</string>
+		<string>Aleo-Bold</string>
+		<string>FuturaLT-Bold</string>
+		<string>AppleSDGothicNeo-Light</string>
+		<string>Lato-Light</string>
+		<string>Futura-CondensedExtraBold</string>
+		<string>Lato-Light</string>
+		<string>Lato-Light</string>
+		<string>AbrilFatface-Regular</string>
+		<string>Lato-Light</string>
+		<string>Lato-Light</string>
+		<string>FuturaLT-ExtraBold</string>
+		<string>AbrilFatface-Regular</string>
+		<string>Aleo-Bold</string>
+		<string>FuturaLT-ExtraBold</string>
+		<string>AbrilFatface-Regular</string>
+		<string>Aleo-Bold</string>
+		<string>AppleSDGothicNeo-ExtraBold</string>
+	</array>
+	<key>length</key>
+	<integer>157632</integer>
+	<key>version</key>
+	<integer>18</integer>
+</dict>
+</plist>

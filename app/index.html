@@ -1,43 +1,94 @@
 <!doctype html>
-<html class="no-js">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>test23</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-
-        <!-- endbower -->
-        <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
     </head>
     <body>
-        <!--[if lt IE 10]>
+
+
+        <div id='circle'></div>
+        <div class='over'></div>
+        <div id='nav-bar'>
+            <span class='nav' data-link='main' id='nav-main'> <img src='images/cuelogo2.png'> </span>
+            <span class='nav' data-link='overview' id='nav-overview'>Healthcare</span>
+            <span class='nav' data-link='mission' id='nav-team'>Mission</span>
+            <span class='nav' data-link='team' id='nav-team'> Makers</span>
+            <span class='nav' data-link='research' id='nav-research'><a href='/research.html'>Research</a></span>
+            <span class='nav' data-link='design' id='nav-design'>Design</span>
+
+        </div>
+    
+        <section id='main'>
+            <div class='subsec'>
+                <div id='main-title'><img src='images/cuelogo2.png'></div>
+
+              <!--   <div id='cue' >
+                    <div id='img0' class='img' ></div>
+                    <div id='img1' class='img' ></div>
+                    <div id='img2' class='img' ></div>
+                    <div id='img3' class='img' ></div>
+                    <div id='img4' class='img' ></div>
+                    <div id='img5' class='img' ></div>
+                    <div id='cue-overlay'></div>
+                </div> -->
+                
+                <div id='logos'>
+                    <div id='about'>A capstone project at the Human-Computer Interaction Institute at Carnegie Mellon.</div>
+                    <div> <img src='/images/logos/telee.png'> </div>
+                    <div> <img src='/images/logos/cmu.png'> </div>
+                    <div> <img src='/images/logos/hcii.png'> </div>
+                </div>
+            </div>
+        
+        </section>
+       
+
+        <script type='text/template' id='overview-template'>
+       <!--   <div id='background'> <%- background %> </div>
+            <div id='problem'> <%- problem %> </div>
+            <div id='goal'> <%- goal %> </div> -->
+        </script>
+
+        <script type='text/template' id='teammate-template'>
+           <!--     <div class='teammate1'>
+                <div id='tname'> <%-name%> </div>
+                <div id='tposition'> <%-position%> </div>
+                <div id='tdesc'> <%-description%> </div>
+            </div> -->
+            <!-- <img src='images/img1.jpg'> -->
+
+        </script>
+
+        <script type='text/template' id='research-template'>
+                <% for (i in tools) { %>
+                <div id='<%-(tools[i].tools).replace(/ /g,"")%>' class='toolsec'>
+                    <h2>
+                        <hr>
+                        <%-tools[i].tools%> 
+                    </h2>
+                    <br>
+                    <p id='tool'> <%-tools[i].description%> </p>
+                </div>
+                <% } %>
+        </script>
+
+        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
-
-          </ul>
-        </div>
-
-
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -49,8 +100,38 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/mapboxjs/mapbox.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/content.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script type='text/javascript'>
+
+        var i = 0;
+        setInterval(function(){
+            i = (i+1)%6;
+            $('.img').fadeOut(0);
+            $('#img'+i).fadeIn(0);
+        },75);
+
+        window.setTimeout(function(){
+            $('#cue-overlay').fadeIn(1500);
+        },4000);
+
+        window.setTimeout(function(){
+            $('#nav-bar').fadeIn(250);
+        },7000)
+
+        </script>
+
+      
 </body>
 </html>

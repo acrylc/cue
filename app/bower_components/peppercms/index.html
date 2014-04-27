@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>PepperCMS</title>
+</head>
+<body>
+	<pre id="content"></pre>
+	<script type="text/javascript" charset="utf-8" src="components/q/q.js"></script>
+	<script type="text/javascript" charset="utf-8" src="peppercms.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	var url = "https://docs.google.com/spreadsheet/ccc?key=0Aqv3NjQVGHDbdDdxOTRzZzRFdmJWb0owV1FPdDI1bUE";
+	var cms = pepper(url, {
+		'Name': 'string',
+		'Age': 'int',
+		'Multiple names': 'arrayOfString',
+		'Favorite floats': 'arrayOfFloat',
+		'Grade': 'float',
+		'Favorite ints (really?)': 'arrayOfInt'
+	});
+	cms.sync()
+	.then(function(data) {
+		//Update view
+		document.getElementById('content').innerHTML = (JSON.stringify(data, null, '\t'));
+	})
+	.fail(function (error) {
+		console.log("Sync Failed: "+ error);
+	})
+	</script>
+</body>
+</html>
